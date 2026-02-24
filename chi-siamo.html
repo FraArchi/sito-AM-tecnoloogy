@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - Oltre 30 anni di esperienza | A.M. Tecnology</title>
+    <meta name="description"
+        content="La storia e i clienti della A.M. Tecnology Srls, da oltre tre decenni al servizio della PA e aziende in Irpinia.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .client-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .client-item {
+            background: white;
+            padding: 15px 20px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .storia-box {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .valori-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .valore {
+            padding: 20px;
+            background: var(--bg-color);
+            border-radius: 8px;
+        }
+
+        .valore h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .valori-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                A.M. Tecnology <span>Srls</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi-siamo.html" class="active">L'Azienda</a></li>
+                    <li><a href="videosorveglianza.html">Videosorveglianza</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="assistenza.html" class="nav-cta">Assistenza Help!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>L'Azienda e La Nostra Storia</h1>
+
+        <div class="storia-box">
+            <div class="img-placeholder" style="height: 300px; margin-bottom: 30px;">
+                <span>[Inserisci Foto Sede Centrale / Fondatore o Team]</span>
+            </div>
+            <h2>Oltre 30 Anni di Esperienza</h2>
+            <p>La ditta A.M. Tecnology ha un’esperienza di oltre <strong>30 anni</strong> nel campo dell'informatica
+                tecnica professionale, delle tecnologie, e dell’assemblaggio oltre che l’istallazione e fornitura di
+                reti cablate.</p>
+            <p>Offriamo garanzia ed affidabilità su prodotti venduti per le pubbliche amministrazioni, scuole statali di
+                vario grado e tipo, medici generici e della ASL Avellino da più di due decenni.</p>
+            <p>Il nostro obiettivo principale non è la grossa distribuzione, ma offrire ai nostri clienti le soluzioni
+                all’avanguardia nel campo informatico, partendo dall’assemblaggio di macchine dedicate alla
+                progettazione e gestione server, fino alla installazione di vere e proprie reti client-server e sistemi
+                per il collegamento a reti telematiche.</p>
+
+            <div class="valori-grid">
+                <div class="valore">
+                    <h4>Affidabilità</h4>
+                    <p>Un partner solido che c'è oggi e ci sarà domani.</p>
+                </div>
+                <div class="valore">
+                    <h4>Competenza</h4>
+                    <p>Aggiornamento e certificazione costante nei settori IT e security.</p>
+                </div>
+                <div class="valore">
+                    <h4>Presenza in Locale</h4>
+                    <p>Interventi diretti rapidi e mirati nelle province di AVELLINO e BENEVENTO.</p>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <h2>I Nostri Clienti Storici</h2>
+            <p>Di seguito un elenco di clienti e istituzioni della zona in cui risiediamo che si servono di noi
+                quotidianamente mediante contratti di consulenza aziendale e pubblica per tutto quello che è di natura
+                informatica, telecomunicazioni e sicurezza.</p>
+
+            <div class="client-list">
+                <div class="client-item">Comune di Grottaminarda (AV)</div>
+                <div class="client-item">Comune di Vallata (AV)</div>
+                <div class="client-item">Comune di Flumeri (AV)</div>
+                <div class="client-item">Comune di Sturno (AV)</div>
+                <div class="client-item">Comune di Melito irpino (AV)</div>
+                <div class="client-item">Comune di Vallesaccarda (AV)</div>
+                <div class="client-item">Comunità Montana ufita (AV)</div>
+                <div class="client-item">A.s.l. di Avellino (vari presidi)</div>
+                <div class="client-item">Scuole statali della provincia</div>
+                <div class="client-item">Numerose Aziende e Studi Professionali</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 A.M. Tecnology Srls. Tutti i diritti riservati.</p>
+        <p>C.da Ponticelli, 20 – 83035 Grottaminarda (AV) | P.IVA 02856510642</p>
+    </footer>
+
+</body>
+
+</html>
