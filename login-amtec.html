@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sistema di Ticketing per le richieste di assistenza sviluppato con Nios4</title>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+        <link rel='preconnect' href='https://fonts.googleapis.com'>
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+        <link href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet'> 
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script type = 'text/javascript' src = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+        <link rel='icon' type='image/png' href='img/favicon-32x32.png'/>
+        <style>
+            body {
+                align-items: center;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                background-image: url('img/bg_login.jpg');
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            .form-signin {
+                width: 100%;
+                max-width: 550px;
+                padding-bottom: 10px;
+                margin: auto;
+                
+            }
+            
+            .form-signin .form-control {
+                position: relative;
+                box-sizing: border-box;
+                height: auto;
+                padding: 10px;
+                
+            }
+            
+            .form-signin input[type='email'] {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                margin: auto;
+                background: url('img/email_login_blu.png');
+                background-repeat: no-repeat;
+                background-size: 25px 25px;
+                padding-left: 33px;
+                background-position: 2px center;
+            }
+            .form-signin input[type='password'] {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                margin: auto;
+                background: url('img/password_login_blu.png');
+                background-repeat: no-repeat;
+                background-size: 25px 25px;
+                padding-left: 33px;
+                background-position: 2px center;
+            }
+            
+            .form-control {
+                display: block;
+                width: 100%;
+                line-height: 1.5;
+            }
+            
+            .image1 {
+                display: block;
+                max-width: 150px;
+                max-height: 100px;
+            }
+            
+            .heading {
+                padding: 15px;
+                color: white;
+                text-align: left;
+                background-image: url('img/header_img_login.jpg');
+            }
+            
+            .heading h6 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            
+            .div1, .div2 {
+                color: #5C5C5C;
+            }
+            
+            input[type='button'],
+            input[type='submit'] {
+                font-weight: bold;
+                background-color: #1E67AE;
+                color: white !important;
+            }
+            
+            .div3 p {
+                color: white;
+            }
+            
+            .div3 img {
+                width: 121px;
+            }
+            
+            #loginerror {
+                color: red;
+                visibility: hidden;
+                opacity: 0;
+            }
+            
+        </style>
+    </head>
+    <body class='text-center'>
+        
+        
+        <form class='form-signin bg-light shadow-lg' id='form1'>
+            <div class='heading text-left '>
+                <img src='file.php?gguid=9490032a-1875-4790-8286-f44beacfa931&cache=1' class='image1 img-responsive mb-2'>
+                <h6><b>A.M. TECNOLOGY SRLS</b></h6>
+                <h6><b>Cda Ponticelli,  20 83035 Grottaminarda AV IT</b></h6>
+                <h6>Tel: <b>0825443080</b></h6>
+                <h6>E-mail: <b>ticket@amtecnology.it</b></h6>
+            </div>
+            <div class='div1 p-3'>
+                <h4><b>Richiesta Assistenza</b></h4>
+                <p>Benvenuto nel servizio di Ticketing. Accedi o Registrati per inserie subito la tua richiesta di assistenza e verificare lo stato dei lavori. Grazie!</p>
+            </div>
+            
+            <input id='email' type='email' class='form-control w-50 mb-3' placeholder='Email' required>
+            <input id='psw' type='password' class='form-control w-50 mb-2' placeholder='Password' required>
+            <input id='tecnico' type='hidden' value='AM_Tecnology_Web_Ticketing'>
+            <p><a href='rememberMe1.php'>Password dimenticata?</a></p>
+            <input type='submit' id='login' name='login' class='btn' value='Accedi'>
+                
+            <div id='loginerror' class='mt-1'>
+                <p>Email/Password errato!</p>
+            </div>
+            
+            <div class='div2'>
+                <p>Non hai ancora un account? <a href='signup.php?tec=AM_Tecnology_Web_Ticketing'>Crealo adesso!</a></p>
+            </div>
+        </form>
+        
+
+        <div class='div3 mt-3'>
+            <p>Powered by  <a href='https://nios4.com' target='blank'><img src='img/powered_by_nios4.png'></a></p>
+        </div>
+        
+        	
+    </body>
+</html>
+<script type='text/javascript' language='javascript'>
+	function resetFields() {
+		$('#email').val('');
+		$('#psw').val('');
+	}
+
+	function loginError() {
+		$('#psw').val('');
+		$('#psw').focus();
+	}
+
+	$(document).ready(function () {
+		$('#login').click(function (e) {
+			e.preventDefault();
+			$.ajax({
+				type: 'POST',
+				url: 'checkLogin.php',
+				data: {
+					email: $('#email').val(),
+					psw: $('#psw').val(),
+				},
+
+				success: function (risposta) {
+					if (risposta == 'OK') {
+						tecnico = $('#tecnico').val(),
+							location = 'option.php?tec='.concat(encodeURIComponent(tecnico));
+					} else if (risposta == 'OK1') {
+						tecnico = $('#tecnico').val(),
+							location = 'addOption.php?tec='.concat(encodeURIComponent(tecnico));
+					} else {
+						$('.form-signin').effect('shake', {times: 4}, 1000);
+						setTimeout(loginError, 1000);
+						$('#loginerror').fadeTo(500, 1, function () {
+							$('#loginerror').css('visibility', 'visible');
+						});
+					}
+				},
+
+				error: function () {
+					alert('Ops. Qualcosa è andato storto!');
+				},
+			});
+		});
+
+		var frm = $('#form1');
+
+		frm.submit(function (e) {
+			e.preventDefault();
+
+			$.ajax({
+				type: 'POST',
+				url: 'checkLogin.php',
+				data: {
+					email: $('#email').val(),
+					psw: $('#psw').val(),
+				},
+
+				success: function (risposta) {
+					if (risposta == 'OK') {
+						location = 'option.php';
+					} else if (risposta == 'OK1') {
+						tecnico = $('#tecnico').val(),
+							location = 'addOption.php?tec='.concat(encodeURIComponent(tecnico));
+					} else {
+						$('.form-signin').effect('shake', {times: 4}, 1000);
+						setTimeout(loginError, 1000);
+						$('#loginerror').fadeTo(500, 1, function () {
+							$('#loginerror').css('visibility', 'visible');
+						});
+					}
+				},
+
+				error: function () {
+					alert('Ops. Qualcosa è andato storto!');
+				},
+			});
+		});
+
+	});
+</script>
